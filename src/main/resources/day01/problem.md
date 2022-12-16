@@ -1,6 +1,6 @@
 # Day 1 - Calorie Counting
 
-The input represent the number of calories of food carried by each Elf:
+The input represents the number of calories of food carried by each Elf:
 ```
 1000
 2000
