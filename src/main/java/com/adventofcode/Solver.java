@@ -42,7 +42,13 @@ public abstract class Solver {
     private boolean check(int part) {
         int actual = solve(Problem.EXAMPLE, part);
         int expected = Utils.parseExpected(day, part);
-        return (expected == actual);
+        if (expected == actual) {
+            return true;
+        } else {
+            System.out.println("Expected: " + expected);
+            System.out.println("Actual: " + actual);
+            return false;
+        }
     }
 
 }
