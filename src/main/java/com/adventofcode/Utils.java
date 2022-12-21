@@ -21,12 +21,11 @@ public class Utils {
         }
     }
 
-    public static int parseExpected(int day, int part) {
+    public static String parseExpected(int day, int part) {
         try {
             String file = String.format(FILE_NAME_FORMAT, day, "expected", part);
             Path path = Paths.get(ClassLoader.getSystemResource(file).toURI());
-            String expected = Files.readString(path);
-            return Integer.parseInt(expected);
+            return Files.readString(path);
         } catch (URISyntaxException | IOException e) {
             throw new RuntimeException(e);
         }

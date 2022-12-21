@@ -65,24 +65,24 @@ public class RockPaperScissors extends Solver {
     }
 
     @Override
-    public int solvePartOne(List<String> lines) {
+    public String solvePartOne(List<String> lines) {
         int score = 0;
         for (String line : lines) {
             Shape shape = charToShape(line.charAt(2));
             Shape other = charToShape(line.charAt(0));
             score += shape.getScore() + getOutcome(shape, other).getScore();
         }
-        return score;
+        return String.valueOf(score);
     }
 
     @Override
-    public int solvePartTwo(List<String> lines) {
+    public String solvePartTwo(List<String> lines) {
         int score = 0;
         for (String line : lines) {
             Shape other = charToShape(line.charAt(0));
             Outcome outcome = charToOutcome(line.charAt(2));
             score += getShape(other, outcome).getScore() + outcome.getScore();
         }
-        return score;
+        return String.valueOf(score);
     }
 }

@@ -11,12 +11,12 @@ public class Rucksack extends Solver {
     }
 
     @Override
-    public int solvePartOne(List<String> lines) {
+    public String solvePartOne(List<String> lines) {
         int sum = 0;
         for (String line : lines) {
             sum += getRepetition(line);
         }
-        return sum;
+        return String.valueOf(sum);
     }
 
     private int getRepetition(String str) {
@@ -50,7 +50,7 @@ public class Rucksack extends Solver {
     }
 
     @Override
-    public int solvePartTwo(List<String> lines) {
+    public String solvePartTwo(List<String> lines) {
         int i = 0;
         int sum = 0;
         while (i < lines.size()) {
@@ -78,6 +78,6 @@ public class Rucksack extends Solver {
                 };
             }
         }
-        return sum;
+        return String.valueOf(sum);
     }
 }

@@ -10,19 +10,19 @@ public abstract class Solver {
         this.day = day;
     }
 
-    public abstract int solvePartOne(List<String> lines);
+    public abstract String solvePartOne(List<String> lines);
 
-    public abstract int solvePartTwo(List<String> lines);
+    public abstract String solvePartTwo(List<String> lines);
 
-    public final int solvePartOne(Problem problem) {
+    public final String solvePartOne(Problem problem) {
         return solve(problem, 1);
     }
 
-    public final int solvePartTwo(Problem problem) {
+    public final String solvePartTwo(Problem problem) {
         return solve(problem, 2);
     }
 
-    private int solve(Problem problem, int part) {
+    private String solve(Problem problem, int part) {
         List<String> lines = Utils.parseInput(day, problem, 1);
         return switch (part) {
             case 1 -> solvePartOne(lines);
@@ -40,9 +40,9 @@ public abstract class Solver {
     }
 
     private boolean check(int part) {
-        int actual = solve(Problem.EXAMPLE, part);
-        int expected = Utils.parseExpected(day, part);
-        if (expected == actual) {
+        String actual = solve(Problem.EXAMPLE, part);
+        String expected = Utils.parseExpected(day, part);
+        if (expected.equals(actual)) {
             return true;
         } else {
             System.out.println("Expected: " + expected);

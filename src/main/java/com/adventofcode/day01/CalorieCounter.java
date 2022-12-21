@@ -12,7 +12,7 @@ public class CalorieCounter extends Solver {
     }
 
     @Override
-    public int solvePartOne(List<String> lines) {
+    public String solvePartOne(List<String> lines) {
         int maxCalories = 0;
         for (int i = 0; i < lines.size(); i++) {
             String line;
@@ -25,12 +25,12 @@ public class CalorieCounter extends Solver {
                 maxCalories = calories;
             }
         }
-        return maxCalories;
+        return String.valueOf(maxCalories);
     }
 
     @Override
-    public int solvePartTwo(List<String> lines) {
-        return topN(lines, 3);
+    public String solvePartTwo(List<String> lines) {
+        return String.valueOf(topN(lines, 3));
     }
 
     private int topN(List<String> lines, int n) {
