@@ -23,7 +23,7 @@ public abstract class Solver {
     }
 
     private String solve(Problem problem, int part) {
-        List<String> lines = Utils.parseInput(day, problem, 1);
+        List<String> lines = Utils.parseInput(day, problem, part);
         return switch (part) {
             case 1 -> solvePartOne(lines);
             case 2 -> solvePartTwo(lines);
