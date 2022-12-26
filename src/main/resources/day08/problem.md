@@ -23,17 +23,3 @@ Find the viewing distance on each of the four direction from a given tree.
 Multiply the four viewing distances to obtain the scenic score for that tree.
 
 The objective is to find the highest scenic score possible for any tree.
-
-```
-1 -> 0
-8 -> 1+0=1
-6 -> 1
-7 -> 1+1=2
-4 -> 1
-5 -> 1+1=2
-6 -> 1+2=3
-7 -> 1+3=4
-8 -> 1+4+2=7
-```
-
-
