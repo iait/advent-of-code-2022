@@ -45,8 +45,10 @@ public abstract class Solver {
         if (expected.equals(actual)) {
             return true;
         } else {
-            System.out.println("Expected: " + expected);
-            System.out.println("Actual: " + actual);
+            System.out.println("Expected:");
+            System.out.println(expected);
+            System.out.println("Actual:");
+            System.out.println(actual);
             return false;
         }
     }
